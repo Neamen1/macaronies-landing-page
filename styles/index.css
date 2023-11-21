@@ -1,0 +1,669 @@
+*{
+    font-family: Montserrat;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #e2e2e2;
+    margin: 0; 
+}
+
+header{
+    height: 60px;
+    background-color: #363636;
+}
+
+.wrapper{
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container{
+    max-width:1720px;
+    /* margin: 0px auto; */
+    padding: 0px 15px;
+}
+
+
+.centered_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexy_div{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 30px;
+}
+
+
+.vert_center{
+    display: flex;
+    align-items: center;
+    
+}
+
+.header-logo{
+    display: flex;
+    height: 60px;
+}
+
+.main-nav a{
+    color: white;
+    text-decoration:none;
+}
+.main-nav ul {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    white-space:nowrap
+}
+
+.main-nav li{
+    display: inline;
+    font-size: 18px;
+    padding-inline: 1em;
+    display:table-cell;
+} 
+
+.action_icons{
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.action_icons a{
+    margin-inline: 5px;
+}
+
+.action_icons #nav_act_icon{
+    margin-left: none;
+}
+.sandwich-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #ffffff;
+    display: block;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+
+
+.content{
+    margin-top: 133px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.content h1{
+    font-size: 56px;
+    margin: 0;
+}
+
+.content p{
+    font-size: 24px;
+    margin: 0;
+}
+
+.box{
+    flex-wrap: nowrap;
+    margin-right: 66px;
+}
+
+.three_image{
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.three_image img{
+    height: 400px;
+    gap: 3%;
+}
+
+
+.about{
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h3{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom:13px;
+}
+
+.about p{
+    font-size: 24px;
+    margin:0;
+}
+
+.info_planes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.info_planes_content{
+
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 16px;
+    background: linear-gradient(238deg, #FFF 35.36%, #D7FFD3 184.65%); border-radius: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.Customers_opinion{
+    margin-top:90px;
+}
+
+.opinion_planes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 90px;
+}
+
+.opinion_plane{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content:space-between;
+
+    margin: 20px;
+    padding: 16px;
+    border-radius: 16px;
+    background: #FFF;
+    flex: 0 1 80%;
+    max-width:300px;
+}
+
+.opinion_plane img {
+    max-width: 50px;
+}
+
+#fc {
+    margin-left: auto;
+    align-self: self-end;
+}
+
+.opinion_plane h4{
+    font-size: 20px;
+    margin: 0;
+}
+
+.opinion_plane p{
+    font-size: 23px;
+    margin:0;
+}
+
+.customer_info{
+    margin: 0;
+}
+
+
+.calculate_order{
+    margin-block:90px;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.features{
+    text-align:center;
+    margin:auto;
+}
+
+.features h2{
+    margin-bottom: 0;
+}
+
+#lefth2{
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.calculator h5{
+    margin:0;
+}
+
+#marg_h5{
+    margin:25px;
+}
+
+.dropbtn {
+    background-color: #6eb982;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.vertical_flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal_flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin:25px;
+}
+
+.extra_sauce{
+    margin-inline: 0;
+}
+
+#special_instructions{
+    resize: none;
+    margin-block: 8px;
+    font-size: 20px;
+}
+#made_for{
+    resize: none;
+    margin-block: 8px;
+    font-size: 20px;
+}
+
+#add_meat_chb{
+    margin-top: 0;
+    margin-left: 107px;
+
+}
+
+/*Quantity text*/
+#quantity{
+    margin:0;
+    padding-inline: 10px;
+}
+
+.change-quantity{
+    padding: 2px;
+}
+
+/*button*/
+#add_to_cart{
+    background-color: #6eb982;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+.add_to_cart{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#calc_image{
+    max-height: 420px;
+    margin-left: 40%;
+}
+
+footer{
+    max-height: 180px;
+    background-color: #363636;
+}
+
+.col-left{
+    color:white;
+    float: left;
+    max-width: 450px;
+}
+
+.col-left ul{
+    list-style-type:none;
+}
+
+
+.col-middle img{
+    max-height:150px;
+}
+
+
+.col-right{
+    float: right;
+    display: flex;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.col-right ul{
+    list-style-type: none;
+}
+
+.col-right1{
+    float: left;
+}
+.col-right1 ul{
+    padding:0;
+}
+
+.col-right2{
+    float: right;
+    
+}
+
+.footer-nav a{
+    color: white;
+    text-decoration:none;
+}
+
+#footer_act_icons{
+    margin: 0;
+}
+
+#footer_justify_between{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+@media (max-width:1440px){
+    .content{
+        flex-direction:column;
+        align-items: center;
+        margin-top:80px;
+    }
+    .container{
+        max-width:1270px;
+    }
+    
+    html {
+        zoom: 90%;
+    }
+    .box{
+        text-align: center;
+        margin-right: 0;
+    }
+    .about{
+        margin-top:40px;
+    }
+    .about h2{
+        margin-bottom:40px;
+    }
+    .Customers_opinion{
+        margin-top:40px;
+    }
+    .Customers_opinion h2{
+        margin-bottom:40px;
+    }
+    .calculate_order{
+        margin-top:30px;
+    }
+    #lefth2{
+        margin-top:30px;
+    }
+}
+
+
+
+@media (max-width:1200px){
+    .container{
+        max-width:970px;
+    }
+    html {
+        zoom: 80%;
+    }
+    .content{
+        margin-top:50px;
+    }
+    .about{
+        margin-top:30px;
+    }
+    .about h2{
+        margin-bottom:30px;
+    }
+    .Customers_opinion{
+        margin-top:30px;
+    }
+    .Customers_opinion h2{
+        margin-bottom:30px;
+    }
+    .calculate_order{
+        margin-top:20px;
+    }
+    #lefth2{
+        margin-top:20px;
+    }
+}
+
+
+
+@media (max-width:991px){
+    .container{
+        max-width:750px;
+    }
+    html {
+        zoom: 70%;
+    }
+    .content{
+        margin-top:30px;
+    }
+    #Pasta_with_cheese{
+        display: none;
+    }
+    .about{
+        margin-top:20px;
+    }
+    .about h2{
+        margin-bottom:20px;
+    }
+    .Customers_opinion{
+        margin-top:20px;
+    }
+    .Customers_opinion h2{
+        margin-bottom:20px;
+    }
+    .calculate_order{
+        margin-top:10px;
+    }
+    #lefth2{
+        margin-top:10px;
+    }
+}
+
+
+
+@media (max-width:767px){
+    .container{
+        max-width:none;
+    }
+    html {
+        zoom: 65%;
+    }
+
+    .sandwich-menu{
+        display: block;
+    }
+
+
+    .content{
+        margin-top:20px;
+    }
+    #header_act_ico{
+        display: none;
+    }
+    .main-nav{
+        display: none;
+    }
+
+    #calc_image{
+        display: none;
+    }
+
+    #add_meat_chb{
+        margin-inline:0;
+    }
+    .checkboxes{
+        margin-inline: 0;
+        align-items: center;
+    }
+
+    .calculate_order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        zoom: 150%;
+    }
+    #horiz_to_vert{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #horiz_to_vert div{
+        align-items: center;
+        justify-content: center;
+    }
+    #horiz_to_vert_rev{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    #txt_al_centr{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .col-left{
+        display: none;
+    }
+    #small_left_col{
+        margin: 0;
+    }
+}

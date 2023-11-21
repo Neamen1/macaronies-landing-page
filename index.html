@@ -5,203 +5,363 @@
     <meta name="description" content="Macaronies landing page">
     <meta name="keywords" content="HTML, food, restaurant">
     <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./styles/index.css">
     <title>Macaronies</title>
 </head>
-<body style="background-color:#e2e2e2">
-    <div class="wrapper">
-        <header id="header">
-            <div class="logo">
-                <img src="./assets/img/logo.jpg" alt="Macaronies" width="200">
+
+<script>
+function toggleMenu(x) {
+    x.classList.toggle("change");
+    var overlay = document.getElementById("overlay");
+    if (overlay.style.width === "100%") {
+        overlay.style.width = "0";
+    } else {
+        overlay.style.width = "100%";
+    }
+}
+</script>
+
+<header>
+    <div class="centered_container flexy_div">
+            <div class="header-logo">
+                <img src="./assets/img/logo.png" alt="Macaronies logo">
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Main</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Order online</a></li>
-                </ul>
-            </nav>
-            <div class="action-icons">
-                <a href="#"><img src="./assets/img/Cart.svg" alt="Cart"></a>
+            
+            <div class="vert_center">
+                
+                <div class="sandwich-menu" onclick="toggleMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="overlay" id="overlay">
+                    <div class="menu">
+                        <a href="#">Main</a>
+                        <a href="#">About us</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Menu</a>
+                        <a href="#">Order online</a>
+                        <a href="#"><img src="./assets/img/Cart.svg" alt="Cart"></a>
+                </div>
+                </div>
+
+                <nav class="main-nav ">
+                    <div class="menu-items">
+                        <ul>
+                            <li><a href="#">Main</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Order online</a></li>
+                            <li><a href="#"><img src="./assets/img/Cart.svg" alt="Cart"></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="action_icons" id="header_act_ico">
                 <a href="#"><img src="./assets/img/Facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="./assets/img/Instagram.svg" alt="Instagram"></a>
             </div>
+            
+    </div>
+</header>
+<body>
 
-        </header>
-        <section id="hero-banner">
-            <div class="content">
-                <h1>Experience the Taste of Italy at Our Authentic Pasta Making Restaurant!</h1>
-                <p>Step into a world where pasta isn't just a meal, it's an art form. At our charming Italian restaurant, we take pride in crafting exquisite pasta dishes that pay homage to our Italian heritage.</p>
-            </div>
-        </section>
-        <section class="about">
-            <h2>What sets us apart?</h2>
-            <div class="info_planes">
-                <div>
-                    <h3>Handcrafted Pasta</h3>
-                    <p>Our skilled pasta artisans meticulously handcraft each pasta variety using the finest durum wheat flour, creating a texture and taste that's unmatched.</p>
-                </div>
-                <div>
-                    <h3>Fresh Ingredients</h3>
-                    <p>We source the freshest, locally grown ingredients to create vibrant sauces and toppings that burst with flavor.</p>
-                </div>
-                <div>
-                    <h3>Fine Wine Selection</h3>
-                    <p>Pair your meal with a carefully curated selection of Italian wines, enhancing your dining experience</p>
-                </div>
-                <div>
-                    <h3>Expert Chefs</h3>
-                    <p>Our talented chefs bring passion and precision to every plate, ensuring that every dish is a work of art.</p>
-                </div>
-                <div>
-                    <h3>Cozy Ambiance</h3>
-                    <p>Enjoy your meal in a warm and inviting atmosphere, reminiscent of a charming Italian trattoria</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="Customers-opinion">
-            <div class="opinion_plane">
-                <p>"I had the most delightful dining experience at this Italian gem! The pasta was absolutely divine, cooked to perfection, and the flavors were authentic and rich. It felt like a taste of Italy right here in [Your City]. I highly recommend trying their handmade pasta - the tagliatelle was my personal favorite."</p>
-                <img src="./assets/img/customer1avatar.png" alt="Customer avatar" class="avatar">
-                <h4>Name Surname</h4>
-                <p class="smaller">Description</p>
-                <img src="./assets/img/Facebook-green.svg" alt="Facebook page link">
-            </div>
-            <div class="opinion_plane">
-                <p>"The ambiance was charming, and the food was exceptional. What truly impressed me was the option to craft my own pasta dish. I got to choose my pasta, sauce, and toppings, creating a personalized masterpiece. It's a must-visit for pasta lovers seeking a unique dining adventure!"</p>
-                <img src="./assets/img/customer2avatar.png" alt="Customer avatar" class="avatar">
-                <h4>Name Surname</h4>
-                <p class="smaller">Description</p>
-                <img src="./assets/img/Facebook-green.svg" alt="Facebook page link">
-            </div>
-            <div class="opinion_plane">
-                <p>“I cannot stop raving about this place! The pasta here is out of this world, and the staff's attention to detail is impeccable. I'm a bit of a foodie, so being able to choose from a variety of pasta shapes, sauces, and ingredients was a dream come true. The end result was a dish that suited my exact cravings. I'll definitely be back for more!</p>
-                <img src="./assets/img/customer3avatar.png" alt="Customer avatar" class="avatar">
-                <h4>Name Surname</h4>
-                <p class="smaller">Description</p>
-                <img src="./assets/img/Facebook-green.svg" alt="Facebook page link">
-            </div>
-        </section>
-        <section class="calculate_order">
-            <div class="features">
-                <h2>You are not limited in menu decisions </h2>
-                <h3>Choose ingredients for your pasta. Try now!</h3>
-            </div>
-            <div class="calculator">
-                <h2>Create your own pasta meal</h2>
-                <div class="drop-down-menu">
-                    <button class="dropbtn">Select Pasta type </button>
-                    <div class="dropdown-content">
-                        <a href="#">Spaghetti</a>
-                        <a href="#">Penne</a>
-                        <a href="#">Fettuccini</a>
-                        <a href="#">Gnocchi (+2.25$)</a>
-                        <a href="#">Cheese Stuffed Tortellini (+3$)</a>
-                    </div>
-                </div>
-                <div class="drop-down-menu">
-                    <button class="dropbtn">Select your sause</button>
-                    <div class="dropdown-content">
-                        <a href="#">Alfredo</a>
-                        <a href="#">Pesto</a>
-                        <a href="#">Marinara</a>
-                        <a href="#">Cream Pesto</a>
-                        <a href="#">Meat Sauce</a>
-                    </div>
-                </div>
-                <div class="optional">
-                    <p>Optional:</p>
-                </div>
-                
-                <div class="add-options">
-                    <div class="checkboxes">
-                        <input type="checkbox" class="addings" value="Extra sauce (+2.99$)">
-                    </div>
-                    <div class="checkboxes">
-                        <h5>Select/add a veggie</h5>
-                        <input type="checkbox" class="addings" value="Broccoli (+2.49$)">
-                        <input type="checkbox" class="addings" value="Mushrooms (+2.49$)">
-                        <input type="checkbox" class="addings" value="Bell pepper mix (+2.49$)">
-                        <input type="checkbox" class="addings" value="Onions (+2.49$)">
-                    </div>
-                    <div class="checkboxes">
-                        <h5>Add a side salad</h5>
-                        <input type="checkbox" class="addings" value="Greek salad (+3.00$) ">
-                        <input type="checkbox" class="addings" value="Garden salad (+2.13$) ">
-                        <input type="checkbox" class="addings" value="Antipasto salad (+2.11$) ">
-                    </div>
-                    <div class="checkboxes">
-                        <h5>Add Meat</h5>
-                        <input type="checkbox" class="addings" value="Meatballs (+5.99$) ">
-                        <input type="checkbox" class="addings" value="Sausage (+4.99$)">
-                        <input type="checkbox" class="addings" value="Shrimp (+4.99$)">
-                        <input type="checkbox" class="addings" value="Chicken (+4.99$)">
-                        <input type="checkbox" class="addings" value="Bacon (+2.00$)">
-                    </div>
-                </div>
-                <div class="special-instructions">
-                    <h5>Special Instructions - Optional</h5>
-                    <input type="text" name="special-instructions" id="special-instructions">
-                </div>
-                <div class="Made-for">
-                    <h5>Made for - Optional</h5>
-                    <input type="text" name="Made-for" id="Made-for">
-                </div>
-                <div class="quantity">
-                    <h5>Quantity</h5>
-                    <button type="button" class="change-quantity">-</button>
-                    <p id="quantity">1</p>
-                    <button type="button" class="change-quantity">+</button>
-                </div>
-                
-                <div class="add-to-cart">
-                    <button type="button" id="add-to-cart">Add to cart</button>
-                </div>
 
-                <div class="total-sum">
-                    <p id="total">Total: 123</p>
-                </div>
-            </div>
-        </section>
 
-        <footer>
-            <div class="col-left working-hours">
-                <h3>WORKING HOURS</h3>
-                <ul>
-                    <li>Monday to Saturday: [X]am - [X]pm; Sunday: [X]am - [X]pm</li>
-                    <li>December 24 2022 (Christmas Eve): [X]am - [X]pm</li>
-                    <li>December 25 2022 (Christmas Day): CLOSED</li>
-                    <li>December 26 2022 (Boxing Day): CLOSED</li>
-                </ul>
-            </div>
-            <div class="col-middle">
-                <img src="./assets/img/logo.jpg" alt="Logo" width="200">
-            </div>
-            <div class="col-right ">
-                <nav class="footer-nav">
-                    <div class="col-right1">
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Locations</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-right2">
-                        <ul>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Terms of use</a></li>
-                        </ul>
-                        <div class="action-icons">
-                            <a href="#"><img src="./assets/img/Facebook.svg" alt="Facebook"></a>
-                            <a href="#"><img src="./assets/img/Instagram.svg" alt="Instagram"></a>
+    <div class="wrapper">
+        <div class="centered_container">
+            <div class="container">
+                <section class="hero_banner">
+                    <div class="content">
+                        <div class="box">
+                            <h1>Experience the Taste of Italy at Our Authentic Pasta Making Restaurant!</h1>
+                            <p>Step into a world where pasta isn't just a meal, it's an art form. At our charming Italian restaurant, we take pride in crafting exquisite pasta dishes that pay homage to our Italian heritage.</p>
+                        </div>
+                        <div class="three_image">
+                            <img src="./assets/img/Photo1.png" alt="Pasta">
+                            <img src="./assets/img/Photo2 spaghetti.png" alt="Pasta on fork">
+                            <img src="./assets/img/Photo3 cheese.png" alt="Pasta with cheese" id="Pasta_with_cheese">
                         </div>
                     </div>
-                </nav>
+                </section>
 
-                
+                <section class="about">
+                    <h2>What sets us apart?</h2>
+                    <div class="info_planes">
+                        <div class="info_planes_content">
+                            <h3>Handcrafted Pasta</h3>
+                            <p>Our skilled pasta artisans meticulously handcraft each pasta variety using the finest durum wheat flour, creating a texture and taste that's unmatched.</p>
+                        </div>
+                        <div class="info_planes_content">
+                            <h3>Fresh Ingredients</h3>
+                            <p>We source the freshest, locally grown ingredients to create vibrant sauces and toppings that burst with flavor.</p>
+                        </div>
+                        <div class="info_planes_content">
+                            <h3>Fine Wine Selection</h3>
+                            <p>Pair your meal with a carefully curated selection of Italian wines, enhancing your dining experience</p>
+                        </div>
+                        <div class="info_planes_content">
+                            <h3>Expert Chefs</h3>
+                            <p>Our talented chefs bring passion and precision to every plate, ensuring that every dish is a work of art.</p>
+                        </div>
+                        <div class="info_planes_content">
+                            <h3>Cozy Ambiance</h3>
+                            <p>Enjoy your meal in a warm and inviting atmosphere, reminiscent of a charming Italian trattoria</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="centered_container">
+            <div class="container">
+            
+                <section class="Customers_opinion">
+                    <h2>Customers opinion</h2>
+
+                    <div class="opinion_planes">
+                    
+                        <div class="opinion_plane">
+                            <div>
+                                <p>"I had the most delightful dining experience at this Italian gem! The pasta was absolutely divine, cooked to perfection, and the flavors were authentic and rich. It felt like a taste of Italy right here in [Your City]. I highly recommend trying their handmade pasta - the tagliatelle was my personal favorite."</p>
+                            </div>
+                            <div class="horizontal_flex ">
+                                <div class="customer_info">
+                                    <img src="./assets/img/customer avatar.png" alt="Customer avatar" class="avatar">
+                                    <h4>Name Surname</h4>
+                                    <p class="smaller">Description</p>
+                                </div>
+                                <div id="fc">
+                                    <img src="./assets/img/Facebook-green.svg" alt="Facebook page link">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="opinion_plane">
+                            <div>
+                                <p>"The ambiance was charming, and the food was exceptional. What truly impressed me was the option to craft my own pasta dish. I got to choose my pasta, sauce, and toppings, creating a personalized masterpiece. It's a must-visit for pasta lovers seeking a unique dining adventure!"</p>
+                            </div>
+                            <div class="horizontal_flex">
+                                <div class="customer_info">
+                                    <img src="./assets/img/customer avatar.png" alt="Customer avatar" class="avatar">
+                                    <h4>Name Surname</h4>
+                                    <p class="smaller">Description</p>
+                                </div>
+                                <div id="fc">
+                                    <img src="./assets/img/Facebook-green.svg" alt="Facebook page link">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="opinion_plane">
+                            <div>
+                                <p>“I cannot stop raving about this place! The pasta here is out of this world, and the staff's attention to detail is impeccable. I'm a bit of a foodie, so being able to choose from a variety of pasta shapes, sauces, and ingredients was a dream come true. The end result was a dish that suited my exact cravings. I'll definitely be back for more!</p>
+                            </div>
+                            <div class="horizontal_flex">
+                                <div class="customer_info">
+                                    <img src="./assets/img/customer avatar.png" alt="Customer avatar" class="avatar">
+                                    <h4>Name Surname</h4>
+                                    <p class="smaller">Description</p>
+                                </div>
+                                <div id="fc">
+                                    <img src="./assets/img/Facebook-green.svg" alt="Facebook page link">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <div class="centered_container">
+            <div class="container">
+                <section class="calculate_order">
+                    <div class="features">
+                        <h2>You are not limited in menu decisions </h2>
+                        <h3>Choose ingredients for your pasta. Try now!</h3>
+                    </div>
+                    <h2 id="lefth2">Create your own pasta meal</h2>
+                    <div class="calculator">
+                        <div class="vertical_flex">
+                            <div class="horizontal_flex" id="horiz_to_vert">
+                                <div class="vertical_flex">
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Select Pasta type </button>
+                                        <div class="dropdown-content">
+                                            <a href="#">Spaghetti</a>
+                                            <a href="#">Penne</a>
+                                            <a href="#">Fettuccini</a>
+                                            <a href="#">Gnocchi (+2.25$)</a>
+                                            <a href="#">Cheese Stuffed Tortellini (+3$)</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="dropbtn">Select your sauce</button>
+                                        <div class="dropdown-content">
+                                            <a href="#">Alfredo</a>
+                                            <a href="#">Pesto</a>
+                                            <a href="#">Marinara</a>
+                                            <a href="#">Cream Pesto</a>
+                                            <a href="#">Meat Sauce</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkboxes extra_sauce">
+                                        <div>
+                                            <input type="checkbox" class="addings" id="extra_sauce" name="extra_sauce" value="Extra sauce (+2.99$)">
+                                            <label for="extra_sauce">Extra sauce (+2.99$)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 id="marg_h5">Optional:</h5>
+                                </div>
+                                
+                                <div>
+                                    <div class="checkboxes">
+                                        <h5>Select/add a veggie</h5>
+                                        <div>
+                                            <input type="checkbox" class="addings" id="broccoli" name="broccoli" value="Broccoli (+2.49$)">
+                                            <label for="broccoli">Broccoli (+2.49$)</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="addings" id="mushrooms" name="mushrooms" value="Mushrooms (+2.49$)">
+                                            <label for="mushrooms">Mushrooms (+2.49$)</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="addings" id="bell_pepper_mix" name="bell_pepper_mix" value="Bell pepper mix (+2.49$)">
+                                            <label for="bell_pepper_mix">Bell pepper mix (+2.49$)</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="addings" id="onions" name="onions" value="Onions (+2.49$)">
+                                            <label for="onions">Onions (+2.49$)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="checkboxes">
+                                        <h5>Add a side salad</h5>
+                                        <div>
+                                            <input type="checkbox" class="addings" id="greek_salad" name="greek_salad" value="Greek salad (+3.00$)">
+                                            <label for="greek_salad">Greek salad (+3.00$)</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="addings" id="garden_salad" name="garden_salad" value="Garden salad (+2.13$)">
+                                            <label for="garden_salad">Garden salad (+2.13$)</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="addings" id="antipasto_salad" name="antipasto_salad" value="Antipasto salad (+2.11$)">
+                                            <label for="antipasto_salad">Antipasto salad (+2.11$)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="horizontal_flex" id="horiz_to_vert_rev">
+                                <div class="vertical_flex" id="txt_al_centr">
+                                    <div class="special-instructions">
+                                        <h5>Special Instructions - Optional</h5>
+                                        <!-- <input type="text" name="special_instructions" id="special_instructions"> -->
+                                        <textarea id="special_instructions"></textarea>
+
+                                    </div>
+                                    <div class="Made-for">
+                                        <h5>Made for - Optional</h5>
+                                        <textarea id="made_for" name="made_for"></textarea>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="checkboxes" id="add_meat_chb">
+                                    <h5>Add Meat</h5>
+                                    <div>
+                                        <input type="checkbox" class="addings" id="meatballs" name="meatballs" value="Meatballs (+5.99$) ">
+                                        <label for="meatballs">Meatballs (+5.99$)</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" class="addings" id="sausage" name="sausage" value="Sausage (+4.99$)">   
+                                        <label for="sausage">Sausage (+4.99$)</label>    
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" class="addings" id="shrimp" name="shrimp" value="Shrimp (+4.99$)">    
+                                        <label for="shrimp">Shrimp (+4.99$)</label>    </div>
+                                    <div>
+                                        <input type="checkbox" class="addings" id="chicken" name="chicken" value="Chicken (+4.99$)">   
+                                        <label for="chicken">Chicken (+4.99$)</label>    
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" class="addings" id="bacon" name="bacon" value="Bacon (+2.00$)">     
+                                        <label for="bacon">Bacon (+2.00$)</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="vertical_flex">
+                                <div class="horizontal_flex">
+                                    <h5>Quantity</h5>
+                                    <button type="button" class="change-quantity">-</button>
+                                    <p id="quantity">1</p>
+                                    <button type="button" class="change-quantity">+</button>
+                                </div>
+
+                                <div class="add_to_cart">
+                                    <button type="button" id="add_to_cart">Add to cart</button>
+                                    <p id="total">Total: 123</p>
+                                </div>
+            
+                                
+                            </div>
+                        </div>
+                        <div class="horizontal_flex">
+                            <img src="./assets/img/Photo4 calculator noodles.png" id="calc_image">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="centered_container" id="footer_justify_between">
+                <div class="col-left working_hours">
+                    <h3>WORKING HOURS</h3>
+                    <ul>
+                        <li>Monday to Saturday: [X]am - [X]pm; Sunday: [X]am - [X]pm</li>
+                        <li>December 24 2022 (Christmas Eve): [X]am - [X]pm</li>
+                        <li>December 25 2022 (Christmas Day): CLOSED</li>
+                        <li>December 26 2022 (Boxing Day): CLOSED</li>
+                    </ul>
+                </div>
+                <div class="col-middle" id="small_left_col">
+                    <img src="./assets/img/logo.png" alt="Logo" width="200">
+                </div>
+                <div class="col-right ">
+                    <nav class="footer-nav">
+                        <div class="col-right1">
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Locations</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-right2">
+                            <ul>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Terms of use</a></li>
+                                <li>
+                                    <div class="action_icons" id="footer_act_icons">
+                                        <a href="#"><img src="./assets/img/Facebook.svg" alt="Facebook"></a>
+                                        <a href="#"><img src="./assets/img/Instagram.svg" alt="Instagram"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </nav>
+
+                </div>
             </div>
         </footer>
     </div>
