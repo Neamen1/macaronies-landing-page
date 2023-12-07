@@ -7,20 +7,11 @@
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js"></script>
+
     <title>Macaronies</title>
 </head>
 
-<script>
-function toggleMenu(x) {
-    x.classList.toggle("change");
-    var overlay = document.getElementById("overlay");
-    if (overlay.style.width === "100%") {
-        overlay.style.width = "0";
-    } else {
-        overlay.style.width = "100%";
-    }
-}
-</script>
 
 <header>
     <div class="centered_container flexy_div">
@@ -188,29 +179,30 @@ function toggleMenu(x) {
                             <div class="horizontal_flex" id="horiz_to_vert">
                                 <div class="vertical_flex">
                                     <div class="dropdown">
-                                        <button class="dropbtn">Select Pasta type </button>
+                                        <button class="dropbtn" id="pasta_dropbtn" value="0">Select Pasta type </button>
                                         <div class="dropdown-content">
-                                            <a href="#">Spaghetti</a>
-                                            <a href="#">Penne</a>
-                                            <a href="#">Fettuccini</a>
-                                            <a href="#">Gnocchi (+2.25$)</a>
-                                            <a href="#">Cheese Stuffed Tortellini (+3$)</a>
+                                            <button onclick="changePastaButtonText(this)" value="10">Spaghetti</button>
+                                            <button onclick="changePastaButtonText(this)" value="10">Penne</button>
+                                            <button onclick="changePastaButtonText(this)" value="10">Fettuccini</button>
+                                            <button onclick="changePastaButtonText(this)" value="12.25">Gnocchi (+2.25$)</button>
+                                            <button onclick="changePastaButtonText(this)" value="13">Cheese Stuffed Tortellini (+3$)</button>
+                                
                                         </div>
                                     </div>
                                     <div class="dropdown">
-                                        <button class="dropbtn">Select your sauce</button>
+                                        <button class="dropbtn" id="sause_dropbtn" value="0">Select your sauce</button>
                                         <div class="dropdown-content">
-                                            <a href="#">Alfredo</a>
-                                            <a href="#">Pesto</a>
-                                            <a href="#">Marinara</a>
-                                            <a href="#">Cream Pesto</a>
-                                            <a href="#">Meat Sauce</a>
+                                            <button onclick="changeSauseButtonText(this)" value="4">Alfredo</a>
+                                            <button onclick="changeSauseButtonText(this)" value="4">Pesto</a>
+                                            <button onclick="changeSauseButtonText(this)" value="4">Marinara</a>
+                                            <button onclick="changeSauseButtonText(this)" value="4">Cream Pesto</a>
+                                            <button onclick="changeSauseButtonText(this)" value="4">Meat Sauce</a>
                                         </div>
                                     </div>
 
                                     <div class="checkboxes extra_sauce">
                                         <div>
-                                            <input type="checkbox" class="addings" id="extra_sauce" name="extra_sauce" value="Extra sauce (+2.99$)">
+                                            <input type="checkbox" class="addings" id="extra_sauce" name="extra_sauce" value="2.99">
                                             <label for="extra_sauce">Extra sauce (+2.99$)</label>
                                         </div>
                                     </div>
@@ -223,19 +215,19 @@ function toggleMenu(x) {
                                     <div class="checkboxes">
                                         <h5>Select/add a veggie</h5>
                                         <div>
-                                            <input type="checkbox" class="addings" id="broccoli" name="broccoli" value="Broccoli (+2.49$)">
+                                            <input type="checkbox" class="addings" id="broccoli" name="broccoli" value="2.49">
                                             <label for="broccoli">Broccoli (+2.49$)</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" class="addings" id="mushrooms" name="mushrooms" value="Mushrooms (+2.49$)">
+                                            <input type="checkbox" class="addings" id="mushrooms" name="mushrooms" value="2.49">
                                             <label for="mushrooms">Mushrooms (+2.49$)</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" class="addings" id="bell_pepper_mix" name="bell_pepper_mix" value="Bell pepper mix (+2.49$)">
+                                            <input type="checkbox" class="addings" id="bell_pepper_mix" name="bell_pepper_mix" value="2.49">
                                             <label for="bell_pepper_mix">Bell pepper mix (+2.49$)</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" class="addings" id="onions" name="onions" value="Onions (+2.49$)">
+                                            <input type="checkbox" class="addings" id="onions" name="onions" value="2.49">
                                             <label for="onions">Onions (+2.49$)</label>
                                         </div>
                                     </div>
@@ -244,15 +236,15 @@ function toggleMenu(x) {
                                     <div class="checkboxes">
                                         <h5>Add a side salad</h5>
                                         <div>
-                                            <input type="checkbox" class="addings" id="greek_salad" name="greek_salad" value="Greek salad (+3.00$)">
+                                            <input type="checkbox" class="addings" id="greek_salad" name="greek_salad" value="3.00">
                                             <label for="greek_salad">Greek salad (+3.00$)</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" class="addings" id="garden_salad" name="garden_salad" value="Garden salad (+2.13$)">
+                                            <input type="checkbox" class="addings" id="garden_salad" name="garden_salad" value="2.13">
                                             <label for="garden_salad">Garden salad (+2.13$)</label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" class="addings" id="antipasto_salad" name="antipasto_salad" value="Antipasto salad (+2.11$)">
+                                            <input type="checkbox" class="addings" id="antipasto_salad" name="antipasto_salad" value="2.11">
                                             <label for="antipasto_salad">Antipasto salad (+2.11$)</label>
                                         </div>
                                     </div>
@@ -277,22 +269,22 @@ function toggleMenu(x) {
                                 <div class="checkboxes" id="add_meat_chb">
                                     <h5>Add Meat</h5>
                                     <div>
-                                        <input type="checkbox" class="addings" id="meatballs" name="meatballs" value="Meatballs (+5.99$) ">
+                                        <input type="checkbox" class="addings" id="meatballs" name="meatballs" value="5.99">
                                         <label for="meatballs">Meatballs (+5.99$)</label>
                                     </div>
                                     <div>
-                                        <input type="checkbox" class="addings" id="sausage" name="sausage" value="Sausage (+4.99$)">   
+                                        <input type="checkbox" class="addings" id="sausage" name="sausage" value="4.99">   
                                         <label for="sausage">Sausage (+4.99$)</label>    
                                     </div>
                                     <div>
-                                        <input type="checkbox" class="addings" id="shrimp" name="shrimp" value="Shrimp (+4.99$)">    
+                                        <input type="checkbox" class="addings" id="shrimp" name="shrimp" value="4.99">    
                                         <label for="shrimp">Shrimp (+4.99$)</label>    </div>
                                     <div>
-                                        <input type="checkbox" class="addings" id="chicken" name="chicken" value="Chicken (+4.99$)">   
+                                        <input type="checkbox" class="addings" id="chicken" name="chicken" value="4.99">   
                                         <label for="chicken">Chicken (+4.99$)</label>    
                                     </div>
                                     <div>
-                                        <input type="checkbox" class="addings" id="bacon" name="bacon" value="Bacon (+2.00$)">     
+                                        <input type="checkbox" class="addings" id="bacon" name="bacon" value="2.00">     
                                         <label for="bacon">Bacon (+2.00$)</label>
                                     </div>
                                 </div>
@@ -302,14 +294,14 @@ function toggleMenu(x) {
                             <div class="vertical_flex">
                                 <div class="horizontal_flex">
                                     <h5>Quantity</h5>
-                                    <button type="button" class="change-quantity">-</button>
+                                    <button type="button" class="change-quantity" onclick="changeQuantity(-1)">-</button>
                                     <p id="quantity">1</p>
-                                    <button type="button" class="change-quantity">+</button>
+                                    <button type="button" class="change-quantity" onclick="changeQuantity(1)">+</button>
                                 </div>
 
                                 <div class="add_to_cart">
-                                    <button type="button" id="add_to_cart">Add to cart</button>
-                                    <p id="total">Total: 123</p>
+                                    <button type="button" id="add_to_cart" onclick="addToCart()">Add to cart</button>
+                                    <p id="total">Total: 0$</p>
                                 </div>
             
                                 
